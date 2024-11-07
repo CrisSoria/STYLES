@@ -1,0 +1,38 @@
+.container {
+  background-image: linear-gradient(#051327, #000);
+  /* fija al elemento en relación al viewport, no al contenedor padre 
+  no se mueve cuando se hace scroll en la página
+  z-index puede estar supuesto por otros elementos
+  */
+  position: fixed;
+  /* forma abrebiada de establecer todos los valores de top, right, bottom y left */
+  inset: 0;
+  z-index: -1;
+}
+.space {
+  --size: 2px;
+  --duration:10s;
+  --space-layer:
+    4vw 50vh 0 #fff,
+    18vw 88vh 0 #fff;
+
+  width: var(--size);
+  height: var(--size);
+  background-color: #fff;
+  /* 
+  usaremos la sombra para añadir multiples estrellas en diferentes posiciones 
+  box-shadow: desplazamientoX desplazamientoY difuminado color;
+  se pueden aplicar múltiples sombras a un mísmo elemento
+  */
+  box-shadow: var(--space-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 75%;
+  animation: moveStars var(--duration, 20s) linear infinite;
+}
+@keyframes moveStars {
+  from { transform: translateY(0);}
+  to { transform: translateY(-100vh);}
+  
+}

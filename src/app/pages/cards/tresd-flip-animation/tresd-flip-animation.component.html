@@ -1,0 +1,39 @@
+<div class="body">
+<div class="section">
+  <div class="btns">
+      <div class="btn-overlay" [class.active]="!isActive" ></div>
+      <a   class="btn btn1 active" [class.active]="isActive" (click)="btnOneClick()">Kayaking</a>
+      <a   class="btn btn2" [class.active]="isActive" (click)="btnTwoClick()">Camping</a>
+  </div>
+  <div class="card" [class.active]="!isActive">
+      <div class="face front">
+          <div class="content">
+              <h3>Kayaking</h3> 
+              <h2><sup>$</sup>39 / 4 <sup>hrs</sup></h2> 
+              <p>per person</p>
+              <div class="icon"><i class="fas fa-map-marker-alt"></i></div>  
+              <p>Drina, Serbia</p>
+              <a  >Choose Date</a>                
+          </div>
+          <div class="img1 sea"><img src="https://assets.codepen.io/1462889/sea.png" alt=""></div>
+          <div class="img2 kayak active" [class.active]="isActive" ><img src="https://assets.codepen.io/1462889/kayak.png" alt=""></div>
+          <div class="img3 water active"[class.active]="isActive" ><img src="https://assets.codepen.io/1462889/water.png" alt=""></div>
+          <div class="img4 stone active"[class.active]="isActive" ><img src="https://assets.codepen.io/1462889/Stone.png" alt=""></div>
+      </div>
+      <div class="face back">
+          <div class="content">
+              <h3>Camping</h3> 
+              <h2><sup>$</sup>39 / 4 <sup>hrs</sup></h2> 
+              <p>per person</p>
+              <div class="icon"><i class="fas fa-map-marker-alt"></i></div>  
+              <p>Drina, Serbia</p>
+              <a  >Choose Date</a>                
+          </div>
+          <div class="img1 grass"><img src="https://assets.codepen.io/1462889/grass.png" alt=""></div>
+          <div class="img2 camp"[class.active]="!isActive"><img src="https://assets.codepen.io/1462889/camp.png" alt=""></div>
+          <div class="img3 ivy"[class.active]="!isActive"><img src="https://assets.codepen.io/1462889/Ivy.png" alt=""></div>
+          <div class="img4 ivyRock"[class.active]="!isActive"><img src="https://assets.codepen.io/1462889/IvyRock.png" alt=""></div>
+      </div>
+  </div>
+</div>
+</div>
